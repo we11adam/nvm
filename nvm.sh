@@ -3047,9 +3047,6 @@ nvm() {
         if [ $NVM_USE_SILENT -eq 1 ]; then
           NVM_USE_CMD="${NVM_USE_CMD} --silent"
         fi
-        if ! nvm_die_on_prefix "${NVM_DELETE_PREFIX}" "${NVM_USE_CMD}"; then
-          return 11
-        fi
       fi
       if [ -n "${NVM_USE_OUTPUT-}" ]; then
         nvm_echo "${NVM_USE_OUTPUT}"
