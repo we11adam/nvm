@@ -2818,7 +2818,7 @@ nvm() {
       fi
       return $EXIT_CODE
     ;;
-    "uninstall")
+    "uninstall" | "rm")
       if [ $# -ne 1 ]; then
         >&2 nvm --help
         return 127
@@ -3235,7 +3235,7 @@ nvm() {
       fi
       return $NVM_LS_EXIT_CODE
     ;;
-    "ls-remote" | "list-remote")
+    "ls-remote" | "list-remote" | "lsr")
       local NVM_LTS
       local PATTERN
       local NVM_NO_COLORS
