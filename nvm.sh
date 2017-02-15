@@ -3026,6 +3026,7 @@ nvm() {
       hash -r
       export NVM_BIN="${NVM_VERSION_DIR}/bin"
       export NVM_INC="${NVM_VERSION_DIR}/include/node"
+      ln -sfv ${NVM_BIN}/node ~/.bin/node >/dev/null
       if [ "${NVM_SYMLINK_CURRENT-}" = true ]; then
         command rm -f "${NVM_DIR}/current" && ln -s "${NVM_VERSION_DIR}" "${NVM_DIR}/current"
       fi
