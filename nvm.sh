@@ -3052,6 +3052,7 @@ nvm() {
       if [ -n "${NVM_USE_OUTPUT-}" ]; then
         nvm_echo "${NVM_USE_OUTPUT}"
       fi
+      nvm alias default $VERSION
     ;;
     "run")
       local provided_version
